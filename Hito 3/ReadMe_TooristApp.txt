@@ -12,7 +12,7 @@ Profesor:
 	=========
 Para poder ejecutar este proyecto se deben seguir los siguientes pasos:
 
-1.Desde la CMD de windows, entrar a la carpeta del repositorio
+1.Desde la CMD de windows, entrar a la carpeta del repositorio ya clonado,
  llamada TooristApp: "\...\ICF232_202010_Grupo9\Hito 3\TooristApp".
 
 2.Crear el entorno virtual con el suguiente comando:
