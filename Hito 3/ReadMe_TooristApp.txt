@@ -1,3 +1,13 @@
+TooristApp© 2020 Copyright
+Ingeniería de Software 1
+Integrantes:
+	-Rodrigo Astudillo
+	-Gustavo Muñoz
+	-Fabián Sanchez
+	-Kurt Riveros
+Profesor:
+	-Pablo Schwarzenberg
+	
 	EJECUCIÓN
 	=========
 Para poder ejecutar este proyecto se deben seguir los siguientes pasos:
