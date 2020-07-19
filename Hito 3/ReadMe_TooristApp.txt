@@ -3,7 +3,7 @@ Ingeniería de Software 1
 Integrantes:
 	-Rodrigo Astudillo
 	-Gustavo Muñoz
-	-Fabián Sanchez
+	-Fabián Perez
 	-Kurt Riveros
 Profesor:
 	-Pablo Schwarzenberg
