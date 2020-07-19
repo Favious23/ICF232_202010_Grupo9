@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Registro de Guía Turístico - tooristApp</title>
+
+<div class = "container" style = "width: 50rem;">
+    <br>
+    <h2 class="card-title">Regístrese</h2>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <table class = "table table-borderless">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Nombre de usuario</label>
+                        <input class="form-control" type="text" name="username">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input class="form-control" type="text" name="first_name">
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input class="form-control" type="text" name="last_name"> 
+                    </div>
+                </div>
+            </div>
+            <!--div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Institución</label>
+                        <input class="form-control" type="text" name="institution"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Título</label>
+                        <input class="form-control" type="text" name="title">
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Año egreso</label>
+                        <input class="form-control" type="text" name="graduation_year"> 
+                    </div>
+                </div>
+            </div-->
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input class="form-control" type="text" name="email"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Constraseña</label>
+                        <input class="form-control" type="password" name="password1"> 
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Confirmar contraseña</label>
+                        <input class="form-control" type="password" name="password2"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-3">
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </table>    
+    </form>
+</div>
+{% endblock %}

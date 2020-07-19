@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="https://1.bp.blogspot.com/-3omTBvnLo8U/XxO9zGbfUFI/AAAAAAAAAB0/SfSB1XHSFiAieroxiUN2IMj15Qpa2FRZACLcBGAsYHQ/s320/pngh.png" 
+            width="140" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            {% if user.is_authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/rutas">Lista de Rutas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'ruta_create' %}">Gestión de Ruta</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                </ul>
+                <span class="navbar-text">
+                    Haz ingresado como ({{ user.username }})
+                </span>
+            {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingresar
+                        <span class="caret">
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="dropdown-item active" class="navbar-brand" href="#" style="color: black;">*Ingrese como Usuario*</a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <a class="dropdown-item" class="navbar-brand" href="{% url 'login' %}" style="color: black;">Ingrese como Guía</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registrarse
+                        <span class="caret">
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="dropdown-item active" class="navbar-brand" href="#" style="color: black;">*Regístrese como Usuario*</a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <a class="dropdown-item" class="navbar-brand" href="{% url 'signup' %}" style="color: black;" style="background: blue;">Regístrese como Guía</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>

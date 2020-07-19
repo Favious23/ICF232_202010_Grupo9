@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<h1>Rutas para esta zona</h1>
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+{% for ruta in rutas %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ ruta.codigo }}</h5>
+                <p class="card-text">{{ ruta.nombre }}</p>
+                <a href="/ruta/{{ ruta.codigo }}" class="card-link">Ir</a>
+                <a href="/ruta/{{ ruta.id }}/delete" class="card-link">Eliminar Ruta</a>
+            </div>
+        </div>
+{% endfor %}
+    </div>
+    <div class="row mt-5 justify-content-center">
+        <a class="btn btn-primary btn-lg" href="{% url 'ruta_create' %}" role="button">Agregar ruta</a>
+    </div>
+</div>
+{% endblock %}

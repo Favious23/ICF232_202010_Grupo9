@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class = "container" style = "width: 50rem;">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table class = "table table-borderless">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Código</label>
+                        <input class="form-control" type="text" name="codigo">
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input class="form-control" type="text" name="nombre">
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Inicio</label>
+                        <input class="form-control" type="text" name="inicio"> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Punto #1</label>
+                        <input class="form-control" type="text" name="punto1"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Punto #2</label>
+                        <input class="form-control" type="text" name="punto2">
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Punto #3</label>
+                        <input class="form-control" type="text" name="punto3"> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Punto #4</label>
+                        <input class="form-control" type="text" name="punto4"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Punto #5</label>
+                        <input class="form-control" type="text" name="punto5"> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <div class="form-group">
+                        <label>Fin</label>
+                        <input class="form-control" type="text" name="fin"> 
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-3">
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Crear Ruta</button>
+                    </div>
+                </div>
+            </div>
+        </table>    
+    </form>
+</div>
+{% endblock %}

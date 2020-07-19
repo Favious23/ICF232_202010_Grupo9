@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "jumbotron">
+    <h1 class = "display-4">{{ruta.nombre}} - {{ruta.codigo}}</h1>    
+    <p class = "lead">Inicio: {{ruta.inicio}}</p>
+    <hr class = "my-3">
+    <p class = "lead">{{ruta.punto1}} >> {{ruta.punto2}} >> {{ruta.punto3}} >> {{ruta.punto4}} >> {{ruta.punto5}}</p>
+    <hr class = "my-3">
+    <p class = "lead">Fin: {{ruta.fin}}</p>
+    <a class="btn btn-primary btn-lg" href="/ruta/{{ ruta.id }}/update" role="button">Actualizar</a>
+    <a class="btn btn-primary btn-lg" href="/ruta/{{ ruta.id }}/delete" role="button">Borrar</a>
+</div>
+{% endblock %}

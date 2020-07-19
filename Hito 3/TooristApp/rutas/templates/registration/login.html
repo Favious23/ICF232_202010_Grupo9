@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>Ingreso de Guía Turístico - tooristApp</title>
+
+<div class = "container" style = "width: 20rem;">
+    <br>
+    <h2 class="card-title">Ingresa</h2>
+    <br>
+    <form action = "" method = "post">
+        {% csrf_token %}
+        <table class = "table table-borderless">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-3">
+                    <div class="form-group">
+                        <label for="username">Nombre de Usuario</label>
+                        <input class="form-control" type="text" name="username">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-md-offset-3">
+                    <div class="form-group">
+                        <label for="username">Contraseña</label>
+                        <input class="form-control" type="password" name="password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-3">
+                    <div class="form-group">
+                        <a href="#">Olvidaste tu contraseña?</a>
+                        <td colspan = "2">
+                            <button class = "btn btn-primary btn-block" type = "submit">Log In</button>
+                        </td>
+                    </div>
+                </div>
+            </div>
+        </table>
+    </form>
+</div>
+{% endblock %}

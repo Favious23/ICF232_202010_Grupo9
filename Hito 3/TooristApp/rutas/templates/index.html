@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Home - tooristApp</title>
+
+<br/>
+<h1 style="color:  #00e68a
+">Sistema de Administración de Rutas Turísticas</h1>
+<br/>
+{%if not user.is_authenticated %}
+    <p>Para acceder al sistema debes ingresar tu usuario y clave.</p>
+{% else %}
+    <h2 style = "color: #00ace6">Bienvenido(a) {{ user.username }}</h2>
+    <p>Ya puedes revisar, crear y modificar tus rutas.</p>
+{% endif %}
+{% endblock %}
